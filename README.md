@@ -1,9 +1,9 @@
-# ☀️ Solar GD - MLM Backoffice Prototype
+# ☀️ Velox Solar - MLM Backoffice Prototype
 
 > Protótipo navegável premium para plataforma de Backoffice MLM
 > no setor de Energia Solar (Geração Distribuída).
 
-![Solar GD](https://img.shields.io/badge/Solar-GD-F59E0B?style=for-the-badge&logo=sun&logoColor=white)
+![Velox Solar](https://img.shields.io/badge/Solar-GD-F59E0B?style=for-the-badge&logo=sun&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -109,5 +109,5 @@ Protótipo para demonstração comercial. Todos os direitos reservados.
 
 ---
 
-Desenvolvido com ☀️ por Solar GD Team
+Desenvolvido com ☀️ por Velox Solar Team
 
