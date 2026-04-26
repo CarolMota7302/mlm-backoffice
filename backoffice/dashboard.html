@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Velox Solar Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- ═══════════════════════════════════════════════════
+             SIDEBAR
+             ═══════════════════════════════════════════════════ -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Brand -->
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-name">Velox Solar</div>
+                    <div class="brand-tagline">Energia Solar</div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <!-- PRINCIPAL -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Principal</div>
+
+                    <div class="nav-item">
+                        <a href="dashboard.html" class="nav-link active">
+                            <span class="nav-icon"><i class="fas fa-th-large"></i></span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="informativos.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-bullhorn"></i></span>
+                            <span class="nav-text">Informativos</span>
+                            <span class="nav-badge">3</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="eventos.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-calendar-alt"></i></span>
+                            <span class="nav-text">Eventos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NEGÓCIO -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Meu Negócio</div>
+
+                    <div class="nav-item">
+                        <a href="cadastrar.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-user-plus"></i></span>
+                            <span class="nav-text">Cadastrar</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="upgrade.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-arrow-up-right-dots"></i></span>
+                            <span class="nav-text">Upgrade</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- REDE -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Minha Rede</div>
+
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-network-wired"></i></span>
+                            <span class="nav-text">Rede</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="rede-diretos.html" class="nav-link">Diretos</a>
+                            <a href="rede-equipe.html" class="nav-link">Equipe</a>
+                            <a href="rede-unilevel.html" class="nav-link">Unilevel</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FINANCEIRO -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Financeiro</div>
+
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-wallet"></i></span>
+                            <span class="nav-text">Financeiro</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="financeiro-resumo.html" class="nav-link">Resumo</a>
+                            <a href="financeiro-extrato.html" class="nav-link">Extrato Detalhado</a>
+                            <a href="financeiro-solicitar-saque.html" class="nav-link">Solicitar Saque</a>
+                            <a href="financeiro-meus-saques.html" class="nav-link">Meus Saques</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELATÓRIOS -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Relatórios</div>
+
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-chart-bar"></i></span>
+                            <span class="nav-text">Relatórios</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="relatorios-bonus.html" class="nav-link">Bônus Totais</a>
+                            <a href="relatorios-graduacoes.html" class="nav-link">Graduações</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MARKETING -->
+                <div class="nav-section">
+                    <div class="nav-section-title">Marketing</div>
+
+                    <div class="nav-item">
+                        <a href="mkt-digital.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-globe"></i></span>
+                            <span class="nav-text">MKT Digital</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="materiais.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-folder-open"></i></span>
+                            <span class="nav-text">Materiais</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Sidebar Footer / User -->
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">CE</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">Carlos Eduardo</div>
+                        <div class="sidebar-user-role">Consultor Ouro ⭐</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- ═══════════════════════════════════════════════════
+             MAIN CONTENT
+             ═══════════════════════════════════════════════════ -->
+        <main class="main-content">
+            <!-- ── TOPBAR ── -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="topbar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="topbar-breadcrumb">
+                        <i class="fas fa-home" style="font-size: 0.8rem;"></i>
+                        <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i>
+                        <span class="current">Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <!-- Action Buttons -->
+                    <button class="topbar-action-btn" onclick="copyToClipboard('https://solargd.com.br/c/carlosenergia')">
+                        <i class="fas fa-link"></i>
+                        <span>Link de Indicação</span>
+                    </button>
+                    <button class="topbar-action-btn" onclick="window.open('#')">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Página de Captura</span>
+                    </button>
+
+                    <div style="width: 1px; height: 28px; background: var(--gray-200); margin: 0 4px;"></div>
+
+                    <!-- Notifications -->
+                    <div class="position-relative">
+                        <button class="topbar-icon-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge-count">5</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom notification-dropdown">
+                            <div class="dropdown-header">
+                                <span>Notificações</span>
+                                <a href="#" style="font-size: 0.75rem; color: var(--primary);">Marcar todas como lidas</a>
+                            </div>
+                            <div class="p-1">
+                                <a href="#" class="notification-item">
+                                    <div class="notif-icon" style="background: var(--accent-100); color: var(--accent-dark);">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <div class="notif-text"><strong>Maria Santos</strong> se cadastrou na sua rede</div>
+                                        <div class="notif-time">Há 2 horas</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notif-icon" style="background: var(--primary-100); color: var(--primary-dark);">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <div class="notif-text">Bônus de <strong>R$ 125,00</strong> creditado na sua conta</div>
+                                        <div class="notif-time">Há 5 horas</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notif-icon" style="background: var(--info-light); color: var(--info-dark);">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <div class="notif-text">Parabéns! Você avançou para <strong>Consultor Ouro</strong></div>
+                                        <div class="notif-time">Há 1 dia</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notif-icon" style="background: var(--warning-light); color: var(--warning-dark);">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <div class="notif-text">Nova campanha de ativação disponível!</div>
+                                        <div class="notif-time">Há 2 dias</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="notification-item">
+                                    <div class="notif-icon" style="background: var(--accent-100); color: var(--accent-dark);">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <div class="notif-text">Saque de <strong>R$ 850,00</strong> foi aprovado</div>
+                                        <div class="notif-time">Há 3 dias</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-center p-2" style="border-top: 1px solid var(--gray-100);">
+                                <a href="#" style="font-size: 0.8125rem; color: var(--primary); font-weight: 600;">Ver todas as notificações</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User -->
+                    <div class="dropdown">
+                        <div class="topbar-user" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="topbar-user-avatar">CE</div>
+                            <div class="topbar-user-info">
+                                <div class="topbar-user-name">Carlos Eduardo</div>
+                                <div class="topbar-user-role">Consultor Ouro</div>
+                            </div>
+                            <i class="fas fa-chevron-down" style="font-size: 0.6rem; color: var(--gray-400); margin-left: 4px;"></i>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
+                            <div class="px-3 py-2" style="border-bottom: 1px solid var(--gray-100);">
+                                <div style="font-size: 0.875rem; font-weight: 700; color: var(--heading-color);">Carlos Eduardo Silva</div>
+                                <div style="font-size: 0.75rem; color: var(--gray-500);">carlosenergia</div>
+                            </div>
+                            <div class="p-1">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Meu Perfil</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-cog"></i> Configurações</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-headset"></i> Suporte</a>
+                            </div>
+                            <div class="dropdown-divider-custom"></div>
+                            <div class="p-1">
+                                <a href="login.html" class="dropdown-item" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ── PAGE CONTENT ── -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                        <div>
+                            <h1 class="page-title">
+                                Bom dia, Alexandre! 
+                            </h1>
+                            <p class="page-subtitle">Aqui está um resumo do seu negócio de energia solar.</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-download me-1"></i> Exportar
+                            </button>
+                            <button class="btn btn-solar btn-sm">
+                                <i class="fas fa-user-plus me-1"></i> Cadastrar Indicado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ ROW 1: KPI CARDS ═══ -->
+                <div class="row g-4 mb-4">
+                    <!-- Saldo Disponível -->
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="kpi-card kpi-success animate-fadeInUp stagger-1">
+                            <div class="kpi-icon icon-success">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-label">Saldo Disponível</div>
+                                <div class="kpi-value">R$ 3.450</div>
+                                <span class="kpi-change up">
+                                    <i class="fas fa-arrow-up"></i> 18% vs mês anterior
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ganhos até hoje -->
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="kpi-card kpi-warning animate-fadeInUp stagger-2">
+                            <div class="kpi-icon icon-warning">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-label">Ganhos até Hoje</div>
+                                <div class="kpi-value">R$ 1.280</div>
+                                <span class="kpi-change up">
+                                    <i class="fas fa-arrow-up"></i> 12% vs mês anterior
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Previsão de Ganhos -->
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="kpi-card kpi-info animate-fadeInUp stagger-3">
+                            <div class="kpi-icon icon-info">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-label">Previsão de Ganhos</div>
+                                <div class="kpi-value">R$ 4.100</div>
+                                <span class="kpi-change up">
+                                    <i class="fas fa-arrow-up"></i> Estimativa mensal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Equipe / Indicados -->
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="kpi-card kpi-primary animate-fadeInUp stagger-4">
+                            <div class="kpi-icon icon-primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="kpi-content">
+                                <div class="kpi-label">Equipe / Indicados</div>
+                                <div class="kpi-value">47 / 12</div>
+                                <span class="kpi-change up">
+                                    <i class="fas fa-arrow-up"></i> 3 novos esta semana
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ ROW 2: INFORMATIVOS + MEU STATUS ═══ -->
+                <div class="row g-4 mb-4">
+                    <!-- Informativos -->
+                    <div class="col-lg-7">
+                        <div class="card animate-fadeInUp stagger-3">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-bullhorn me-2 text-warning"></i>Informativos</h5>
+                                <a href="informativos.html" class="btn btn-ghost btn-sm">Ver todos <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- Banner Informativo -->
+                                <div style="background: var(--gradient-power); padding: 28px; position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: rgba(245,158,11,0.1); border-radius: 50%;"></div>
+                                    <div style="position: absolute; bottom: -20px; right: 40px; width: 80px; height: 80px; background: rgba(245,158,11,0.08); border-radius: 50%;"></div>
+                                    <div style="position: relative; z-index: 2;">
+                                        <span class="badge-status badge-pending mb-2" style="background: rgba(245,158,11,0.2); color: #FBBF24;">
+                                            <i class="fas fa-star"></i> Novidade
+                                        </span>
+                                        <h4 style="color: white; font-size: 1.125rem; margin-bottom: 8px;">🔆 Nova Usina Solar em Minas Gerais!</h4>
+                                        <p style="color: rgba(255,255,255,0.7); font-size: 0.8125rem; margin-bottom: 16px; max-width: 80%;">
+                                            Nossa nova usina de 5 MW foi inaugurada em Uberlândia. Agora temos mais capacidade para atender seus clientes na região Sudeste.
+                                        </p>
+                                        <a href="informativos.html" class="btn btn-solar btn-sm">
+                                            Ler mais <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Mini list -->
+                                <div class="p-3">
+                                    <div class="d-flex align-items-center gap-3 p-2" style="border-bottom: 1px solid var(--gray-100);">
+                                        <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></div>
+                                        <div style="flex: 1; font-size: 0.8125rem; color: var(--gray-700);">Campanha de ativação - Ganhe bônus em dobro em junho!</div>
+                                        <span style="font-size: 0.7rem; color: var(--gray-400); white-space: nowrap;">2 dias atrás</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 p-2">
+                                        <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0;"></div>
+                                        <div style="flex: 1; font-size: 0.8125rem; color: var(--gray-700);">Novo material de apresentação disponível para download</div>
+                                        <span style="font-size: 0.7rem; color: var(--gray-400); white-space: nowrap;">5 dias atrás</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meu Status -->
+                    <div class="col-lg-5">
+                        <div class="card animate-fadeInUp stagger-4 tab-parent" style="height: 100%;">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-trophy me-2" style="color: var(--primary);"></i>Meu Status</h5>
+                                <nav class="nav-tabs-custom" style="font-size: 0;">
+                                    <a href="#" class="nav-link active" data-tab="#tabResumo">Resumo</a>
+                                    <a href="#" class="nav-link" data-tab="#tabPermanente">Permanente</a>
+                                    <a href="#" class="nav-link" data-tab="#tabMensal">Mensal</a>
+                                </nav>
+                            </div>
+                            <div class="card-body">
+                                <!-- Tab: Resumo -->
+                                <div class="tab-pane active" id="tabResumo">
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div style="width: 56px; height: 56px; border-radius: 14px; background: var(--gradient-solar); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">
+                                            <i class="fas fa-medal"></i>
+                                        </div>
+                                        <div>
+                                            <div style="font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Meu Kit</div>
+                                            <div style="font-size: 1.125rem; font-weight: 700; color: var(--heading-color);">Consultor Profissional</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-700);">Graduação Permanente</span>
+                                            <span class="badge-rank"><i class="fas fa-star"></i> Consultor Ouro</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span style="font-size: 0.75rem; color: var(--gray-500);">Progresso para <strong>Líder</strong></span>
+                                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary);">68%</span>
+                                        </div>
+                                        <div class="progress-custom">
+                                            <div class="progress-bar" data-width="68" style="width: 0;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex gap-3 mt-4">
+                                        <div class="flex-fill text-center p-3" style="background: var(--gray-50); border-radius: 10px;">
+                                            <div style="font-size: 1.25rem; font-weight: 800; color: var(--heading-color);">1.250</div>
+                                            <div style="font-size: 0.7rem; color: var(--gray-500);">Pts Pessoais</div>
+                                        </div>
+                                        <div class="flex-fill text-center p-3" style="background: var(--gray-50); border-radius: 10px;">
+                                            <div style="font-size: 1.25rem; font-weight: 800; color: var(--heading-color);">8.430</div>
+                                            <div style="font-size: 0.7rem; color: var(--gray-500);">Pts Equipe</div>
+                                        </div>
+                                        <div class="flex-fill text-center p-3" style="background: var(--gray-50); border-radius: 10px;">
+                                            <div style="font-size: 1.25rem; font-weight: 800; color: var(--heading-color);">12</div>
+                                            <div style="font-size: 0.7rem; color: var(--gray-500);">Diretos Ativos</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Permanente -->
+                                <div class="tab-pane" id="tabPermanente" style="display: none;">
+                                    <div class="text-center mb-4">
+                                        <div class="rank-icon rank-gold mx-auto mb-3" style="width: 72px; height: 72px; font-size: 1.8rem;">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h4 style="margin-bottom: 4px;">Consultor Ouro</h4>
+                                        <p class="text-muted" style="font-size: 0.8125rem;">Graduação Permanente Atingida</p>
+                                    </div>
+                                    <div style="background: var(--gray-50); border-radius: 10px; padding: 16px;">
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem; border-bottom: 1px solid var(--gray-200);">
+                                            <span class="text-muted">Pontos Pessoais Req.</span>
+                                            <span><strong>1.000</strong> <i class="fas fa-check-circle text-success ms-1"></i></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem; border-bottom: 1px solid var(--gray-200);">
+                                            <span class="text-muted">Pontos Equipe Req.</span>
+                                            <span><strong>5.000</strong> <i class="fas fa-check-circle text-success ms-1"></i></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem;">
+                                            <span class="text-muted">Diretos Ativos Req.</span>
+                                            <span><strong>8</strong> <i class="fas fa-check-circle text-success ms-1"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Mensal -->
+                                <div class="tab-pane" id="tabMensal" style="display: none;">
+                                    <div class="text-center mb-3">
+                                        <span class="badge-status badge-active"><i class="fas fa-check"></i> Ativo neste mês</span>
+                                    </div>
+                                    <div style="background: var(--accent-50, #ECFDF5); border-radius: 10px; padding: 16px; border: 1px solid var(--accent-100);">
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem; border-bottom: 1px solid rgba(16,185,129,0.15);">
+                                            <span class="text-muted">Volume Pessoal (Mês)</span>
+                                            <span><strong>320 pts</strong></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem; border-bottom: 1px solid rgba(16,185,129,0.15);">
+                                            <span class="text-muted">Volume Equipe (Mês)</span>
+                                            <span><strong>1.850 pts</strong></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between py-2" style="font-size: 0.8125rem;">
+                                            <span class="text-muted">Ativações no Mês</span>
+                                            <span><strong>4 novas</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ ROW 3: PONTUAÇÕES + CADASTROS ═══ -->
+                <div class="row g-4 mb-4">
+                    <!-- Pontuações -->
+                    <div class="col-lg-7">
+                        <div class="card animate-fadeInUp">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-chart-area me-2" style="color: var(--info);"></i>Pontuações (Últimos 30 dias)</h5>
+                                <nav class="nav-tabs-custom">
+                                    <a href="#" class="nav-link active">Unilevel</a>
+                                    <a href="#" class="nav-link">Graduação</a>
+                                </nav>
+                            </div>
+                            <div class="card-body">
+                                <!-- Mini KPI -->
+                                <div class="row g-3 mb-4">
+                                    <div class="col-6 col-md-3">
+                                        <div class="text-center p-2" style="background: var(--primary-50); border-radius: 10px;">
+                                            <div style="font-size: 1.125rem; font-weight: 800; color: var(--primary-dark);">1.250</div>
+                                            <div style="font-size: 0.65rem; color: var(--gray-500); font-weight: 600;">Vol. Pessoal</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="text-center p-2" style="background: var(--info-light); border-radius: 10px;">
+                                            <div style="font-size: 1.125rem; font-weight: 800; color: var(--info-dark);">8.430</div>
+                                            <div style="font-size: 0.65rem; color: var(--gray-500); font-weight: 600;">Vol. Equipe</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="text-center p-2" style="background: var(--accent-100); border-radius: 10px;">
+                                            <div style="font-size: 1.125rem; font-weight: 800; color: var(--accent-dark);">9.680</div>
+                                            <div style="font-size: 0.65rem; color: var(--gray-500); font-weight: 600;">Pts Totais</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="text-center p-2" style="background: rgba(139,92,246,0.1); border-radius: 10px;">
+                                            <div style="font-size: 1.125rem; font-weight: 800; color: #7C3AED;">42.150</div>
+                                            <div style="font-size: 0.65rem; color: var(--gray-500); font-weight: 600;">Acumulado</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chart -->
+                                <div class="chart-container" style="height: 260px;">
+                                    <canvas id="chartPontuacao"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cadastros Ativos -->
+                    <div class="col-lg-5">
+                        <div class="card animate-fadeInUp" style="height: 100%;">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-user-check me-2" style="color: var(--accent);"></i>Cadastros Ativos</h5>
+                                <select class="form-select" style="width: auto; height: 34px; font-size: 0.75rem; padding: 4px 30px 4px 10px;">
+                                    <option>Junho 2024</option>
+                                    <option>Maio 2024</option>
+                                    <option>Abril 2024</option>
+                                </select>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="chartCadastros"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ ROW 4: TOP 5 + ÚLTIMAS ATIVAÇÕES ═══ -->
+                <div class="row g-4 mb-4">
+                    <!-- Top 5 da Rede -->
+                    <div class="col-lg-6">
+                        <div class="card animate-fadeInUp">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-ranking-star me-2" style="color: var(--primary);"></i>Top 5 da Rede</h5>
+                                <span style="font-size: 0.7rem; color: var(--gray-400);">Este mês</span>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 50px;">#</th>
+                                                <th>Consultor</th>
+                                                <th class="text-end">Volume</th>
+                                                <th class="text-end">Diretos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span style="width: 28px; height: 28px; border-radius: 8px; background: var(--gradient-solar); color: white; font-size: 0.7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;">1</span>
+                                                </td>
+                                                <td>
+                                                    <div style="font-weight: 600; font-size: 0.8125rem;">João Oliveira</div>
+                                                    <div style="font-size: 0.7rem; color: var(--gray-400);">joaooliveira</div>
+                                                </td>
+                                                <td class="text-end">
+                                                    <strong style="color: var(--heading-color);">3.250 pts</strong>
+                                                </td>
+                                                <td class="text-end"><span class="badge-status badge-active">8</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span style="width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #C0C0C0, #A8A8A8); color: white; font-size: 0.7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;">2</span>
+                                                </td>
+                                                <td>
+                                                    <div style="font-weight: 600; font-size: 0.8125rem;">Maria Santos</div>
+                                                    <div style="font-size: 0.7rem; color: var(--gray-400);">mariasantos</div>
+                                                </td>
+                                                <td class="text-end">
+                                                    <strong style="color: var(--heading-color);">2.890 pts</strong>
+                                                </td>
+                                                <td class="text-end"><span class="badge-status badge-active">6</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span style="width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #CD7F32, #B8860B); color: white; font-size: 0.7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;">3</span>
+                                                </td>
+                                                <td>
+                                                    <div style="font-weight: 600; font-size: 0.8125rem;">Ana Costa</div>
+                                                    <div style="font-size: 0.7rem; color: var(--gray-400);">anacosta</div>
+                                                </td>
+                                                <td class="text-end">
+                                                    <strong style="color: var(--heading-color);">2.150 pts</strong>
+                                                </td>
+                                                <td class="text-end"><span class="badge-status badge-active">5</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="width: 28px; height: 28px; border-radius: 8px; background: var(--gray-200); color: var(--gray-600); font-size: 0.7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;">4</span></td>
+                                                <td>
+                                                    <div style="font-weight: 600; font-size: 0.8125rem;">Pedro Souza</div>
+                                                    <div style="font-size: 0.7rem; color: var(--gray-400);">pedrosouza</div>
+                                                </td>
+                                                <td class="text-end"><strong style="color: var(--heading-color);">1.780 pts</strong></td>
+                                                <td class="text-end"><span class="badge-status badge-active">4</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span style="width: 28px; height: 28px; border-radius: 8px; background: var(--gray-200); color: var(--gray-600); font-size: 0.7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center;">5</span></td>
+                                                <td>
+                                                    <div style="font-weight: 600; font-size: 0.8125rem;">Juliana Lima</div>
+                                                    <div style="font-size: 0.7rem; color: var(--gray-400);">julianalima</div>
+                                                </td>
+                                                <td class="text-end"><strong style="color: var(--heading-color);">1.420 pts</strong></td>
+                                                <td class="text-end"><span class="badge-status badge-active">3</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Últimas Ativações -->
+                    <div class="col-lg-6">
+                        <div class="card animate-fadeInUp">
+                            <div class="card-header-custom">
+                                <h5><i class="fas fa-user-clock me-2" style="color: var(--accent);"></i>Últimas Ativações</h5>
+                                <a href="rede-diretos.html" class="btn btn-ghost btn-sm">Ver todos <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- Ativação Item -->
+                                <div class="d-flex align-items-center gap-3 p-3" style="border-bottom: 1px solid var(--gray-100);">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--accent-100); color: var(--accent-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;">FS</div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; font-size: 0.8125rem; color: var(--heading-color);">Fernanda Almeida</div>
+                                        <div style="font-size: 0.7rem; color: var(--gray-500);">fernandaalmeida · Nível 1 · São Paulo/SP</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="badge-status badge-active"><i class="fas fa-check"></i> Ativo</span>
+                                        <div style="font-size: 0.65rem; color: var(--gray-400); margin-top: 2px;">Hoje, 14:32</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3 p-3" style="border-bottom: 1px solid var(--gray-100);">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--info-light); color: var(--info-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;">LP</div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; font-size: 0.8125rem; color: var(--heading-color);">Lucas Pereira</div>
+                                        <div style="font-size: 0.7rem; color: var(--gray-500);">lucaspereira · Nível 1 · BH/MG</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="badge-status badge-active"><i class="fas fa-check"></i> Ativo</span>
+                                        <div style="font-size: 0.65rem; color: var(--gray-400); margin-top: 2px;">Ontem, 09:15</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3 p-3" style="border-bottom: 1px solid var(--gray-100);">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--primary-100); color: var(--primary-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;">CR</div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; font-size: 0.8125rem; color: var(--heading-color);">Camila Rodrigues</div>
+                                        <div style="font-size: 0.7rem; color: var(--gray-500);">camilarodrigues · Nível 2 · Curitiba/PR</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="badge-status badge-active"><i class="fas fa-check"></i> Ativo</span>
+                                        <div style="font-size: 0.65rem; color: var(--gray-400); margin-top: 2px;">18/06, 16:45</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3 p-3" style="border-bottom: 1px solid var(--gray-100);">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(139,92,246,0.1); color: #7C3AED; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;">MM</div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; font-size: 0.8125rem; color: var(--heading-color);">Marcos Mendes</div>
+                                        <div style="font-size: 0.7rem; color: var(--gray-500);">marcosmendes · Nível 1 · Rio/RJ</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="badge-status badge-pending"><i class="fas fa-clock"></i> Pendente</span>
+                                        <div style="font-size: 0.65rem; color: var(--gray-400); margin-top: 2px;">17/06, 11:20</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3 p-3">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--danger-light); color: var(--danger-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;">RG</div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; font-size: 0.8125rem; color: var(--heading-color);">Ricardo Gomes</div>
+                                        <div style="font-size: 0.7rem; color: var(--gray-500);">ricardogomes · Nível 2 · Salvador/BA</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="badge-status badge-inactive"><i class="fas fa-times"></i> Inativo</span>
+                                        <div style="font-size: 0.65rem; color: var(--gray-400); margin-top: 2px;">15/06, 08:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══ FOOTER ═══ -->
+                <div class="text-center py-4" style="border-top: 1px solid var(--gray-200); margin-top: 20px;">
+                    <p style="font-size: 0.75rem; color: var(--gray-400); margin: 0;">
+                        © 2024 Velox Solar — Plataforma de Energia Solar | Todos os direitos reservados
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ═══ CONFIRM MODAL ═══ -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja realizar esta ação?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-solar btn-confirm-action">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Initialize Charts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initPontuacaoChart('chartPontuacao');
+            initCadastrosChart('chartCadastros');
+        });
+    </script>
+</body>
+</html>

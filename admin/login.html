@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="admin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Solar GD</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <style>
+        .admin-login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 50%, #16213E 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .admin-login-page::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 60%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+        }
+        .admin-login-page::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(245,158,11,0.04) 0%, transparent 70%);
+        }
+        .admin-login-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 48px 44px;
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .admin-login-card .form-control {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.1);
+            color: white;
+            height: 50px;
+        }
+        .admin-login-card .form-control::placeholder {
+            color: rgba(255,255,255,0.35);
+        }
+        .admin-login-card .form-control:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+            color: white;
+        }
+        .admin-login-card .form-label {
+            color: rgba(255,255,255,0.7);
+        }
+        .admin-login-card .input-icon {
+            color: rgba(255,255,255,0.3);
+        }
+        .admin-login-card .input-toggle {
+            color: rgba(255,255,255,0.3);
+        }
+        .admin-login-card .form-check-label {
+            color: rgba(255,255,255,0.6);
+        }
+        .admin-grid-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login-page">
+        <div class="admin-grid-bg"></div>
+        
+        <!-- Floating elements -->
+        <i class="fas fa-cog solar-float solar-float-1" style="color: rgba(59,130,246,0.08); font-size: 100px;"></i>
+        <i class="fas fa-shield-halved solar-float solar-float-2" style="color: rgba(59,130,246,0.06); font-size: 70px;"></i>
+
+        <div class="admin-login-card animate-scaleIn">
+            <!-- Brand -->
+            <div class="text-center mb-4">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3B82F6, #2563EB); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 8px 30px rgba(59,130,246,0.3);">
+                    <i class="fas fa-sun" style="color: white; font-size: 1.5rem;"></i>
+                </div>
+                <h2 style="color: white; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px;">Solar GD</h2>
+                <div class="admin-badge mx-auto">
+                    <i class="fas fa-cog"></i> PAINEL ADMINISTRATIVO
+                </div>
+            </div>
+
+            <p class="text-center mb-4" style="color: rgba(255,255,255,0.5); font-size: 0.875rem;">
+                Acesse o painel de administração do sistema.
+            </p>
+
+            <!-- Form -->
+            <form id="adminLoginForm">
+                <div class="mb-3">
+                    <label class="form-label">Usuário Admin</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-user-shield input-icon"></i>
+                        <input type="text" class="form-control" placeholder="Usuário administrador" value="admin" style="padding-left: 48px;">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Senha</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" class="form-control" placeholder="Senha de acesso" value="admin123" style="padding-left: 48px;">
+                        <button type="button" class="input-toggle" tabindex="-1">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="rememberAdmin" checked>
+                    <label class="form-check-label" for="rememberAdmin" style="font-size: 0.8125rem;">
+                        Manter conectado
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-block w-100" style="background: linear-gradient(135deg, #3B82F6, #2563EB); color: white; box-shadow: 0 4px 15px rgba(59,130,246,0.35); font-weight: 700;">
+                    <i class="fas fa-sign-in-alt me-2"></i>
+                    Acessar Painel
+                </button>
+            </form>
+
+            <div class="text-center mt-4">
+                <a href="../backoffice/login.html" style="color: rgba(255,255,255,0.4); font-size: 0.8125rem;">
+                    <i class="fas fa-arrow-left me-1"></i> Voltar ao Backoffice
+                </a>
+            </div>
+
+            <div class="text-center mt-4" style="padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06);">
+                <p style="font-size: 0.7rem; color: rgba(255,255,255,0.3); margin: 0;">
+                    © 2024 Solar GD — Área Restrita
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

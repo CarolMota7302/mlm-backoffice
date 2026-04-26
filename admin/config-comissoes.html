@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="admin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comissões Unilevel - Velox Solar Admin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <style>.sidebar{background:linear-gradient(180deg,#0D0D1A 0%,#1A1A2E 50%,#16213E 100%)!important}.nav-link.active{border-left-color:#3B82F6!important;background:rgba(59,130,246,0.12)!important}.nav-link.active .nav-icon{color:#3B82F6!important}.nav-submenu .nav-link:hover::before,.nav-submenu .nav-link.active::before{background:#3B82F6!important}</style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><div class="brand-logo" style="background:linear-gradient(135deg,#3B82F6,#2563EB);box-shadow:0 4px 15px rgba(59,130,246,0.3);"><i class="fas fa-cog"></i></div><div class="brand-text"><div class="brand-name">Velox Solar</div><div class="brand-tagline" style="color:#3B82F6;">Admin Panel</div></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Visão Geral</div><div class="nav-item"><a href="dashboard.html" class="nav-link"><span class="nav-icon"><i class="fas fa-th-large"></i></span><span class="nav-text">Dashboard</span></a></div></div>
+                <div class="nav-section"><div class="nav-section-title">Gestão</div>
+                    <div class="nav-item"><a href="usuarios.html" class="nav-link"><span class="nav-icon"><i class="fas fa-users"></i></span><span class="nav-text">Usuários</span></a></div>
+                    <div class="nav-item"><a href="pedidos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-shopping-cart"></i></span><span class="nav-text">Pedidos</span></a></div>
+                    <div class="nav-item"><a href="saques.html" class="nav-link"><span class="nav-icon"><i class="fas fa-money-bill-transfer"></i></span><span class="nav-text">Saques</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Configurações MLM</div>
+                    <div class="nav-item has-submenu open"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-sliders"></i></span><span class="nav-text">Configurações</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu" style="display:block;"><a href="config-comissoes.html" class="nav-link active">Comissões Unilevel</a><a href="config-graduacoes.html" class="nav-link">Graduações</a><a href="config-licencas.html" class="nav-link">Licenças / Kits</a><a href="config-financeiro.html" class="nav-link">Regras Financeiras</a><a href="config-bonus.html" class="nav-link">Tipos de Bônus</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Relatórios</div><div class="nav-item"><a href="relatorios.html" class="nav-link"><span class="nav-icon"><i class="fas fa-chart-pie"></i></span><span class="nav-text">Relatórios</span></a></div></div>
+                <div class="nav-section"><div class="nav-section-title">Conteúdo</div>
+                    <div class="nav-item"><a href="informativos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-newspaper"></i></span><span class="nav-text">Informativos</span></a></div>
+                    <div class="nav-item"><a href="materiais.html" class="nav-link"><span class="nav-icon"><i class="fas fa-folder-open"></i></span><span class="nav-text">Materiais</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Sistema</div><div class="nav-item"><a href="customizacao.html" class="nav-link"><span class="nav-icon"><i class="fas fa-palette"></i></span><span class="nav-text">Customização</span></a></div></div>
+            </nav>
+            <div class="sidebar-footer"><div class="sidebar-user"><div class="sidebar-user-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB);">AD</div><div class="sidebar-user-info"><div class="sidebar-user-name">Administrador</div><div class="sidebar-user-role" style="color:#3B82F6;">Super Admin</div></div></div></div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left"><button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button><div class="topbar-breadcrumb"><span class="admin-badge"><i class="fas fa-shield-halved"></i> ADMIN</span><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span>Configurações</span><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span class="current">Comissões</span></div></div>
+                <div class="topbar-right"><div class="dropdown"><div class="topbar-user" data-bs-toggle="dropdown"><div class="topbar-user-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB);">AD</div><div class="topbar-user-info"><div class="topbar-user-name">Administrador</div><div class="topbar-user-role">Super Admin</div></div></div><div class="dropdown-menu dropdown-menu-end dropdown-menu-custom"><div class="p-1"><a href="login.html" class="dropdown-item" style="color:var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a></div></div></div></div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-layer-group me-2" style="color:#3B82F6;"></i>Configuração de Comissões Unilevel</h1>
+                    <p class="page-subtitle">Defina os percentuais de comissão para cada nível da rede.</p>
+                </div>
+
+                <!-- Alerta -->
+                <div class="d-flex align-items-center gap-3 mb-4 p-3 animate-fadeInUp" style="background:var(--warning-light);border:1px solid rgba(245,158,11,0.3);border-radius:12px;">
+                    <i class="fas fa-exclamation-triangle" style="color:var(--warning-dark);font-size:1.2rem;"></i>
+                    <span style="font-size:0.8125rem;color:var(--warning-dark);font-weight:500;">⚠️ Alterações afetam o <strong>próximo ciclo de cálculo</strong>. Comissões já processadas não serão recalculadas.</span>
+                </div>
+
+                <!-- Número de Níveis -->
+                <div class="card mb-4 animate-fadeInUp">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <label class="form-label fw-700">Número de Níveis</label>
+                                <input type="number" class="form-control" value="10" min="1" max="20" style="width:120px;">
+                            </div>
+                            <div class="col-md-8">
+                                <p class="text-muted fs-sm mb-0">Define até quantos níveis de profundidade a comissão será paga na rede unilevel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela Editável -->
+                <div class="config-card animate-fadeInUp">
+                    <div class="config-header">
+                        <h5><i class="fas fa-table me-2" style="color:#3B82F6;"></i> Tabela de Comissões por Nível</h5>
+                    </div>
+                    <div class="config-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-editable mb-0">
+                                <thead>
+                                    <tr><th style="width:80px;">Nível</th><th>Percentual (%)</th><th>Graduação Mínima</th><th style="width:120px;">Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">1</td><td><input type="text" value="10%"></td><td><select><option>Iniciante</option><option selected>Iniciante</option><option>Consultor Bronze</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">2</td><td><input type="text" value="5%"></td><td><select><option>Iniciante</option><option selected>Consultor Bronze</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">3</td><td><input type="text" value="4%"></td><td><select><option>Iniciante</option><option selected>Consultor Bronze</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">4</td><td><input type="text" value="3%"></td><td><select><option>Consultor Bronze</option><option selected>Consultor Prata</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">5</td><td><input type="text" value="2%"></td><td><select><option>Consultor Prata</option><option selected>Consultor Ouro</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">6</td><td><input type="text" value="1%"></td><td><select><option>Consultor Ouro</option><option selected>Líder</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">7</td><td><input type="text" value="1%"></td><td><select><option selected>Líder</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">8</td><td><input type="text" value="0,5%"></td><td><select><option selected>Líder Sênior</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">9</td><td><input type="text" value="0,5%"></td><td><select><option selected>Diretor</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                    <tr><td class="fw-700 text-center" style="font-size:1rem;">10</td><td><input type="text" value="0,5%"></td><td><select><option selected>Diretor Executivo</option></select></td><td><label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="config-footer">
+                        <!-- Payout Card -->
+                        <div class="payout-card me-auto" style="background:linear-gradient(135deg,#3B82F6,#2563EB);">
+                            <div class="payout-label"><i class="fas fa-calculator me-2"></i>Payout Total</div>
+                            <div class="payout-value">27,5%</div>
+                        </div>
+                        <button class="btn btn-outline-secondary"><i class="fas fa-undo me-1"></i> Resetar</button>
+                        <button class="btn" style="background:linear-gradient(135deg,#3B82F6,#2563EB);color:white;" onclick="showToast('Configurações salvas com sucesso!','success')"><i class="fas fa-save me-1"></i> Salvar Configurações</button>
+                    </div>
+                </div>
+
+                <div class="text-center py-4" style="border-top:1px solid var(--gray-200);margin-top:30px;"><p style="font-size:0.75rem;color:var(--gray-400);margin:0;">© 2024 Velox Solar — Painel Administrativo</p></div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script><script src="../assets/js/main.js"></script>
+</body>
+</html>

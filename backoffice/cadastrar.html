@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Indicado - Velox Solar</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><div class="brand-logo"><i class="fas fa-sun"></i></div><div class="brand-text"><div class="brand-name">Velox Solar</div><div class="brand-tagline">Energia Solar</div></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Principal</div>
+                    <div class="nav-item"><a href="dashboard.html" class="nav-link"><span class="nav-icon"><i class="fas fa-th-large"></i></span><span class="nav-text">Dashboard</span></a></div>
+                    <div class="nav-item"><a href="informativos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-bullhorn"></i></span><span class="nav-text">Informativos</span></a></div>
+                    <div class="nav-item"><a href="eventos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-calendar-alt"></i></span><span class="nav-text">Eventos</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Meu Negócio</div>
+                    <div class="nav-item"><a href="cadastrar.html" class="nav-link active"><span class="nav-icon"><i class="fas fa-user-plus"></i></span><span class="nav-text">Cadastrar</span></a></div>
+                    <div class="nav-item"><a href="upgrade.html" class="nav-link"><span class="nav-icon"><i class="fas fa-arrow-up-right-dots"></i></span><span class="nav-text">Upgrade</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Minha Rede</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-network-wired"></i></span><span class="nav-text">Rede</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="rede-diretos.html" class="nav-link">Diretos</a><a href="rede-equipe.html" class="nav-link">Equipe</a><a href="rede-unilevel.html" class="nav-link">Unilevel</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Financeiro</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-wallet"></i></span><span class="nav-text">Financeiro</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="financeiro-resumo.html" class="nav-link">Resumo</a><a href="financeiro-extrato.html" class="nav-link">Extrato</a><a href="financeiro-solicitar-saque.html" class="nav-link">Solicitar Saque</a><a href="financeiro-meus-saques.html" class="nav-link">Meus Saques</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Relatórios</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-chart-bar"></i></span><span class="nav-text">Relatórios</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="relatorios-bonus.html" class="nav-link">Bônus Totais</a><a href="relatorios-graduacoes.html" class="nav-link">Graduações</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Marketing</div>
+                    <div class="nav-item"><a href="mkt-digital.html" class="nav-link"><span class="nav-icon"><i class="fas fa-globe"></i></span><span class="nav-text">MKT Digital</span></a></div>
+                    <div class="nav-item"><a href="materiais.html" class="nav-link"><span class="nav-icon"><i class="fas fa-folder-open"></i></span><span class="nav-text">Materiais</span></a></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="sidebar-user"><div class="sidebar-user-avatar">CE</div><div class="sidebar-user-info"><div class="sidebar-user-name">Carlos Eduardo</div><div class="sidebar-user-role">Consultor Ouro ⭐</div></div></div></div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                    <div class="topbar-breadcrumb"><a href="dashboard.html"><i class="fas fa-home" style="font-size:0.8rem;"></i></a><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span class="current">Cadastrar Indicado</span></div>
+                </div>
+                <div class="topbar-right">
+                    <div class="dropdown"><div class="topbar-user" data-bs-toggle="dropdown"><div class="topbar-user-avatar">CE</div><div class="topbar-user-info"><div class="topbar-user-name">Carlos Eduardo</div><div class="topbar-user-role">Consultor Ouro</div></div></div>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom"><div class="p-1"><a href="login.html" class="dropdown-item" style="color:var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a></div></div></div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-user-plus me-2" style="color:var(--primary);"></i>Cadastrar Novo Indicado</h1>
+                    <p class="page-subtitle">Cadastre um novo consultor diretamente na sua rede.</p>
+                </div>
+
+                <!-- Sponsor info -->
+                <div class="d-flex align-items-center gap-3 mb-4 p-3 animate-fadeInUp" style="background:var(--primary-50); border:1px solid var(--primary-100); border-radius:12px;">
+                    <div style="width:44px;height:44px;border-radius:12px;background:var(--gradient-solar);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;">CE</div>
+                    <div>
+                        <div style="font-size:0.75rem;color:var(--gray-500);">Patrocinador (Você)</div>
+                        <div style="font-size:0.9375rem;font-weight:700;color:var(--heading-color);">Carlos Eduardo Silva <span class="text-muted fw-400">(carlosenergia)</span></div>
+                    </div>
+                </div>
+
+                <!-- Seleção de Kit -->
+                <div class="card mb-4 animate-fadeInUp stagger-1">
+                    <div class="card-header-custom"><h5><i class="fas fa-box me-2" style="color:var(--primary);"></i>Selecione o Kit / Licença</h5></div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="form-check p-3" style="border:2px solid var(--gray-200);border-radius:12px;cursor:pointer;">
+                                    <input class="form-check-input" type="radio" name="kit" id="kitBasico">
+                                    <label class="form-check-label w-100" for="kitBasico" style="cursor:pointer;">
+                                        <div class="fw-700">Básico</div>
+                                        <div class="fs-xs text-muted">3 níveis de comissão</div>
+                                        <div class="fw-800 mt-1" style="color:var(--primary);">R$ 99,90</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check p-3" style="border:2px solid var(--primary);border-radius:12px;background:var(--primary-50);cursor:pointer;">
+                                    <input class="form-check-input" type="radio" name="kit" id="kitPro" checked>
+                                    <label class="form-check-label w-100" for="kitPro" style="cursor:pointer;">
+                                        <div class="fw-700">Profissional <span class="badge-status badge-pending" style="font-size:0.6rem;">Popular</span></div>
+                                        <div class="fs-xs text-muted">7 níveis de comissão</div>
+                                        <div class="fw-800 mt-1" style="color:var(--primary);">R$ 249,90</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check p-3" style="border:2px solid var(--gray-200);border-radius:12px;cursor:pointer;">
+                                    <input class="form-check-input" type="radio" name="kit" id="kitPremium">
+                                    <label class="form-check-label w-100" for="kitPremium" style="cursor:pointer;">
+                                        <div class="fw-700">Premium</div>
+                                        <div class="fs-xs text-muted">10 níveis de comissão</div>
+                                        <div class="fw-800 mt-1" style="color:var(--primary);">R$ 499,90</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <form>
+                    <div class="card mb-4 animate-fadeInUp stagger-2">
+                        <div class="card-header-custom"><h5><i class="fas fa-user me-2" style="color:var(--accent);"></i>Dados do Novo Consultor</h5></div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-12"><label class="form-label">Nome Completo *</label><input type="text" class="form-control" placeholder="Nome completo do indicado" required></div>
+                                <div class="col-md-6"><label class="form-label">E-mail *</label><input type="email" class="form-control" placeholder="email@exemplo.com" required></div>
+                                <div class="col-md-6"><label class="form-label">Confirmar E-mail *</label><input type="email" class="form-control" placeholder="Confirme o e-mail" required></div>
+                                <div class="col-md-6"><label class="form-label">CPF *</label><input type="text" class="form-control mask-cpf" placeholder="000.000.000-00" maxlength="14" required></div>
+                                <div class="col-md-6"><label class="form-label">Celular *</label><input type="text" class="form-control mask-phone" placeholder="(00) 00000-0000" maxlength="15" required></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 animate-fadeInUp stagger-3">
+                        <div class="card-header-custom"><h5><i class="fas fa-lock me-2" style="color:var(--info);"></i>Dados de Acesso</h5></div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4"><label class="form-label">Usuário *</label><input type="text" class="form-control" placeholder="Escolha um usuário" required></div>
+                                <div class="col-md-4"><label class="form-label">Senha *</label><input type="password" class="form-control" placeholder="Mínimo 8 caracteres" required></div>
+                                <div class="col-md-4"><label class="form-label">Confirmar Senha *</label><input type="password" class="form-control" placeholder="Repita a senha" required></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center animate-fadeInUp stagger-4">
+                        <button type="button" class="btn btn-solar btn-lg" style="min-width:300px;" onclick="showToast('Indicado cadastrado com sucesso! Link de pagamento enviado por e-mail.', 'success')">
+                            <i class="fas fa-user-plus me-2"></i> Cadastrar Indicado
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center py-4" style="border-top:1px solid var(--gray-200); margin-top:30px;">
+                    <p style="font-size:0.75rem; color:var(--gray-400); margin:0;">© 2024 Velox Solar — Plataforma de Energia Solar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

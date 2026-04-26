@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bônus Totais - Velox Solar</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><div class="brand-logo"><i class="fas fa-sun"></i></div><div class="brand-text"><div class="brand-name">Velox Solar</div><div class="brand-tagline">Energia Solar</div></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Principal</div>
+                    <div class="nav-item"><a href="dashboard.html" class="nav-link"><span class="nav-icon"><i class="fas fa-th-large"></i></span><span class="nav-text">Dashboard</span></a></div>
+                    <div class="nav-item"><a href="informativos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-bullhorn"></i></span><span class="nav-text">Informativos</span></a></div>
+                    <div class="nav-item"><a href="eventos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-calendar-alt"></i></span><span class="nav-text">Eventos</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Meu Negócio</div>
+                    <div class="nav-item"><a href="cadastrar.html" class="nav-link"><span class="nav-icon"><i class="fas fa-user-plus"></i></span><span class="nav-text">Cadastrar</span></a></div>
+                    <div class="nav-item"><a href="upgrade.html" class="nav-link"><span class="nav-icon"><i class="fas fa-arrow-up-right-dots"></i></span><span class="nav-text">Upgrade</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Minha Rede</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-network-wired"></i></span><span class="nav-text">Rede</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="rede-diretos.html" class="nav-link">Diretos</a><a href="rede-equipe.html" class="nav-link">Equipe</a><a href="rede-unilevel.html" class="nav-link">Unilevel</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Financeiro</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-wallet"></i></span><span class="nav-text">Financeiro</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="financeiro-resumo.html" class="nav-link">Resumo</a><a href="financeiro-extrato.html" class="nav-link">Extrato</a><a href="financeiro-solicitar-saque.html" class="nav-link">Solicitar Saque</a><a href="financeiro-meus-saques.html" class="nav-link">Meus Saques</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Relatórios</div>
+                    <div class="nav-item has-submenu open"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-chart-bar"></i></span><span class="nav-text">Relatórios</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu" style="display:block;"><a href="relatorios-bonus.html" class="nav-link active">Bônus Totais</a><a href="relatorios-graduacoes.html" class="nav-link">Graduações</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Marketing</div>
+                    <div class="nav-item"><a href="mkt-digital.html" class="nav-link"><span class="nav-icon"><i class="fas fa-globe"></i></span><span class="nav-text">MKT Digital</span></a></div>
+                    <div class="nav-item"><a href="materiais.html" class="nav-link"><span class="nav-icon"><i class="fas fa-folder-open"></i></span><span class="nav-text">Materiais</span></a></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="sidebar-user"><div class="sidebar-user-avatar">CE</div><div class="sidebar-user-info"><div class="sidebar-user-name">Carlos Eduardo</div><div class="sidebar-user-role">Consultor Ouro ⭐</div></div></div></div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                    <div class="topbar-breadcrumb"><a href="dashboard.html"><i class="fas fa-home" style="font-size:0.8rem;"></i></a><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span>Relatórios</span><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span class="current">Bônus Totais</span></div>
+                </div>
+                <div class="topbar-right">
+                    <div class="dropdown"><div class="topbar-user" data-bs-toggle="dropdown"><div class="topbar-user-avatar">CE</div><div class="topbar-user-info"><div class="topbar-user-name">Carlos Eduardo</div><div class="topbar-user-role">Consultor Ouro</div></div></div>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom"><div class="p-1"><a href="login.html" class="dropdown-item" style="color:var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a></div></div></div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                        <div>
+                            <h1 class="page-title"><i class="fas fa-coins me-2" style="color:var(--primary);"></i>Bônus Totais</h1>
+                            <p class="page-subtitle">Detalhamento completo de todos os bônus recebidos.</p>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <select class="form-select" style="width:auto; height:38px; font-size:0.8125rem;">
+                                <option>Junho 2024</option><option>Maio 2024</option><option>Abril 2024</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Totalizadores por tipo -->
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-1">
+                            <div class="stat-icon" style="background:var(--primary-100); color:var(--primary-dark);"><i class="fas fa-layer-group"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 1.250</div>
+                            <div class="stat-label">Produção</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-2">
+                            <div class="stat-icon" style="background:var(--info-light); color:var(--info-dark);"><i class="fas fa-user-plus"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 890</div>
+                            <div class="stat-label">Indicação Direta</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-3">
+                            <div class="stat-icon" style="background:var(--accent-100); color:var(--accent-dark);"><i class="fas fa-expand"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 650</div>
+                            <div class="stat-label">Expansão</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-4">
+                            <div class="stat-icon" style="background:rgba(139,92,246,0.1); color:#7C3AED;"><i class="fas fa-rotate"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 420</div>
+                            <div class="stat-label">Recorrência</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-5">
+                            <div class="stat-icon" style="background:rgba(30,58,95,0.1); color:var(--secondary);"><i class="fas fa-calendar-check"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 350</div>
+                            <div class="stat-label">Ativação Mensal</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-6">
+                            <div class="stat-icon" style="background:var(--danger-light); color:var(--danger-dark);"><i class="fas fa-plug"></i></div>
+                            <div class="stat-value" style="font-size:1.1rem;">R$ 280</div>
+                            <div class="stat-label">Conexão Clientes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="card mb-4 animate-fadeInUp">
+                    <div class="card-header-custom"><h5><i class="fas fa-chart-bar me-2" style="color:var(--primary);"></i>Comparativo por Tipo de Bônus</h5></div>
+                    <div class="card-body">
+                        <div class="chart-container" style="height:300px;"><canvas id="chartBonusTipo"></canvas></div>
+                    </div>
+                </div>
+
+                <!-- Tabela detalhada -->
+                <div class="card animate-fadeInUp">
+                    <div class="card-header-custom">
+                        <h5>Detalhamento de Bônus — Junho 2024</h5>
+                        <button class="btn btn-outline-secondary btn-sm"><i class="fas fa-file-csv me-1"></i> Exportar</button>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table datatable mb-0">
+                                <thead>
+                                    <tr><th>Data</th><th>Tipo de Bônus</th><th>Referente a</th><th>Nível</th><th class="text-end">Valor</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="fs-sm text-muted">20/06</td><td><span class="badge-status badge-pending">Produção</span></td><td class="fs-sm">Maria Santos — Assinatura Solar Residencial</td><td class="text-center">1</td><td class="text-end fw-600" style="color:var(--accent);">R$ 125,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">19/06</td><td><span class="badge-status badge-approved">Indicação Direta</span></td><td class="fs-sm">Lucas Pereira — Ativação Kit Premium</td><td class="text-center">1</td><td class="text-end fw-600" style="color:var(--accent);">R$ 80,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">17/06</td><td><span class="badge-status" style="background:rgba(139,92,246,0.1);color:#7C3AED;">Recorrência</span></td><td class="fs-sm">Carteira de clientes ativos — Junho</td><td class="text-center">—</td><td class="text-end fw-600" style="color:var(--accent);">R$ 320,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">15/06</td><td><span class="badge-status badge-active">Expansão</span></td><td class="fs-sm">Equipe João Oliveira — Meta atingida</td><td class="text-center">—</td><td class="text-end fw-600" style="color:var(--accent);">R$ 250,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">14/06</td><td><span class="badge-status badge-pending">Produção</span></td><td class="fs-sm">Ana Costa — Assinatura Solar Comercial</td><td class="text-center">2</td><td class="text-end fw-600" style="color:var(--accent);">R$ 45,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">12/06</td><td><span class="badge-status" style="background:rgba(30,58,95,0.1);color:var(--secondary);">Ativação Mensal</span></td><td class="fs-sm">Qualificação mensal atingida — Junho</td><td class="text-center">—</td><td class="text-end fw-600" style="color:var(--accent);">R$ 150,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">08/06</td><td><span class="badge-status badge-blocked" style="background:var(--danger-light);color:var(--danger-dark);">Conexão Clientes</span></td><td class="fs-sm">5 clientes de energia solar ativos</td><td class="text-center">—</td><td class="text-end fw-600" style="color:var(--accent);">R$ 200,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">05/06</td><td><span class="badge-status badge-pending">Produção</span></td><td class="fs-sm">Pedro Souza — Assinatura Solar Residencial</td><td class="text-center">3</td><td class="text-end fw-600" style="color:var(--accent);">R$ 35,00</td></tr>
+                                    <tr><td class="fs-sm text-muted">01/06</td><td><span class="badge-status badge-approved">Indicação Direta</span></td><td class="fs-sm">Fernanda Almeida — Ativação Kit Profissional</td><td class="text-center">1</td><td class="text-end fw-600" style="color:var(--accent);">R$ 80,00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center py-4" style="border-top:1px solid var(--gray-200); margin-top:30px;">
+                    <p style="font-size:0.75rem; color:var(--gray-400); margin:0;">© 2024 Velox Solar — Plataforma de Energia Solar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { initBonusTipoChart('chartBonusTipo'); });</script>
+</body>
+</html>

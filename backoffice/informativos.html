@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativos - Velox Solar Backoffice</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- ═══ SIDEBAR (mesmo do dashboard) ═══ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo"><i class="fas fa-sun"></i></div>
+                <div class="brand-text">
+                    <div class="brand-name">Velox Solar</div>
+                    <div class="brand-tagline">Energia Solar</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Principal</div>
+                    <div class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-th-large"></i></span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="informativos.html" class="nav-link active">
+                            <span class="nav-icon"><i class="fas fa-bullhorn"></i></span>
+                            <span class="nav-text">Informativos</span>
+                            <span class="nav-badge">3</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="eventos.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-calendar-alt"></i></span>
+                            <span class="nav-text">Eventos</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Meu Negócio</div>
+                    <div class="nav-item">
+                        <a href="cadastrar.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-user-plus"></i></span>
+                            <span class="nav-text">Cadastrar</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="upgrade.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-arrow-up-right-dots"></i></span>
+                            <span class="nav-text">Upgrade</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Minha Rede</div>
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-network-wired"></i></span>
+                            <span class="nav-text">Rede</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="rede-diretos.html" class="nav-link">Diretos</a>
+                            <a href="rede-equipe.html" class="nav-link">Equipe</a>
+                            <a href="rede-unilevel.html" class="nav-link">Unilevel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Financeiro</div>
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-wallet"></i></span>
+                            <span class="nav-text">Financeiro</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="financeiro-resumo.html" class="nav-link">Resumo</a>
+                            <a href="financeiro-extrato.html" class="nav-link">Extrato Detalhado</a>
+                            <a href="financeiro-solicitar-saque.html" class="nav-link">Solicitar Saque</a>
+                            <a href="financeiro-meus-saques.html" class="nav-link">Meus Saques</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Relatórios</div>
+                    <div class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-chart-bar"></i></span>
+                            <span class="nav-text">Relatórios</span>
+                            <span class="nav-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="relatorios-bonus.html" class="nav-link">Bônus Totais</a>
+                            <a href="relatorios-graduacoes.html" class="nav-link">Graduações</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Marketing</div>
+                    <div class="nav-item">
+                        <a href="mkt-digital.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-globe"></i></span>
+                            <span class="nav-text">MKT Digital</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="materiais.html" class="nav-link">
+                            <span class="nav-icon"><i class="fas fa-folder-open"></i></span>
+                            <span class="nav-text">Materiais</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">CE</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">Carlos Eduardo</div>
+                        <div class="sidebar-user-role">Consultor Ouro ⭐</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- ═══ MAIN ═══ -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                    <div class="topbar-breadcrumb">
+                        <a href="dashboard.html"><i class="fas fa-home" style="font-size:0.8rem;"></i></a>
+                        <i class="fas fa-chevron-right" style="font-size:0.5rem;"></i>
+                        <span class="current">Informativos</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="dropdown">
+                        <div class="topbar-user" data-bs-toggle="dropdown">
+                            <div class="topbar-user-avatar">CE</div>
+                            <div class="topbar-user-info">
+                                <div class="topbar-user-name">Carlos Eduardo</div>
+                                <div class="topbar-user-role">Consultor Ouro</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
+                            <div class="p-1">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Meu Perfil</a>
+                                <a href="login.html" class="dropdown-item" style="color:var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-bullhorn me-2" style="color:var(--primary);"></i>Informativos</h1>
+                    <p class="page-subtitle">Fique por dentro das novidades da Velox Solar.</p>
+                </div>
+
+                <!-- News Cards Grid -->
+                <div class="row g-4">
+                    <!-- News 1 -->
+                    <div class="col-lg-6 animate-fadeInUp stagger-1">
+                        <div class="news-card">
+                            <div class="news-image" style="background: var(--gradient-power); display:flex; align-items:center; justify-content:center;">
+                                <i class="fas fa-solar-panel" style="font-size:4rem; color:rgba(245,158,11,0.3);"></i>
+                                <span class="news-date-badge">20 Jun 2024</span>
+                            </div>
+                            <div class="news-body">
+                                <h4 class="news-title">🔆 Nova Usina Solar de 5 MW Inaugurada em Minas Gerais!</h4>
+                                <p class="news-excerpt">
+                                    Nossa nova usina fotovoltaica em Uberlândia já está operando a plena capacidade. Com 5 MW de potência instalada, ampliamos nossa capacidade de atendimento na região Sudeste em 40%.
+                                </p>
+                                <div class="news-footer">
+                                    <span><i class="fas fa-eye me-1"></i> 342 visualizações</span>
+                                    <a href="#" style="color:var(--primary); font-weight:600;">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 2 -->
+                    <div class="col-lg-6 animate-fadeInUp stagger-2">
+                        <div class="news-card">
+                            <div class="news-image" style="background: linear-gradient(135deg, #059669, #10B981); display:flex; align-items:center; justify-content:center;">
+                                <i class="fas fa-bolt" style="font-size:4rem; color:rgba(255,255,255,0.2);"></i>
+                                <span class="news-date-badge" style="background:var(--accent-dark);">18 Jun 2024</span>
+                            </div>
+                            <div class="news-body">
+                                <h4 class="news-title">⚡ Campanha de Ativação: Bônus em Dobro em Junho!</h4>
+                                <p class="news-excerpt">
+                                    Durante todo o mês de junho, os bônus de ativação de novos consultores serão pagos em dobro! Aproveite esta oportunidade única para acelerar seus ganhos e expandir sua rede.
+                                </p>
+                                <div class="news-footer">
+                                    <span><i class="fas fa-eye me-1"></i> 528 visualizações</span>
+                                    <a href="#" style="color:var(--primary); font-weight:600;">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 3 -->
+                    <div class="col-lg-6 animate-fadeInUp stagger-3">
+                        <div class="news-card">
+                            <div class="news-image" style="background: linear-gradient(135deg, #2563EB, #3B82F6); display:flex; align-items:center; justify-content:center;">
+                                <i class="fas fa-file-powerpoint" style="font-size:4rem; color:rgba(255,255,255,0.2);"></i>
+                                <span class="news-date-badge" style="background:var(--info-dark);">15 Jun 2024</span>
+                            </div>
+                            <div class="news-body">
+                                <h4 class="news-title">📄 Novo Material de Apresentação Disponível</h4>
+                                <p class="news-excerpt">
+                                    Atualizamos a apresentação comercial com novos dados de economia e depoimentos de clientes satisfeitos. Faça o download na seção de Materiais e compartilhe com seus contatos.
+                                </p>
+                                <div class="news-footer">
+                                    <span><i class="fas fa-eye me-1"></i> 189 visualizações</span>
+                                    <a href="materiais.html" style="color:var(--primary); font-weight:600;">Baixar material <i class="fas fa-download ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 4 -->
+                    <div class="col-lg-6 animate-fadeInUp stagger-4">
+                        <div class="news-card">
+                            <div class="news-image" style="background: linear-gradient(135deg, #7C3AED, #8B5CF6); display:flex; align-items:center; justify-content:center;">
+                                <i class="fas fa-trophy" style="font-size:4rem; color:rgba(255,255,255,0.2);"></i>
+                                <span class="news-date-badge" style="background:#7C3AED;">10 Jun 2024</span>
+                            </div>
+                            <div class="news-body">
+                                <h4 class="news-title">🏆 Ranking de Maio: Confira os Campeões!</h4>
+                                <p class="news-excerpt">
+                                    O ranking de maio foi fechado! Confira os 10 consultores que mais se destacaram e conheça as estratégias dos líderes. Próximo mês pode ser a sua vez de brilhar!
+                                </p>
+                                <div class="news-footer">
+                                    <span><i class="fas fa-eye me-1"></i> 456 visualizações</span>
+                                    <a href="#" style="color:var(--primary); font-weight:600;">Ler mais <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="text-center py-4" style="border-top:1px solid var(--gray-200); margin-top:30px;">
+                    <p style="font-size:0.75rem; color:var(--gray-400); margin:0;">© 2024 Velox Solar — Plataforma de Energia Solar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

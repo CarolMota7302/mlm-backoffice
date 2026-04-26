@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKT Digital - Velox Solar</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><div class="brand-logo"><i class="fas fa-sun"></i></div><div class="brand-text"><div class="brand-name">Velox Solar</div><div class="brand-tagline">Energia Solar</div></div></div>
+            <nav class="sidebar-nav">
+                <div class="nav-section"><div class="nav-section-title">Principal</div>
+                    <div class="nav-item"><a href="dashboard.html" class="nav-link"><span class="nav-icon"><i class="fas fa-th-large"></i></span><span class="nav-text">Dashboard</span></a></div>
+                    <div class="nav-item"><a href="informativos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-bullhorn"></i></span><span class="nav-text">Informativos</span></a></div>
+                    <div class="nav-item"><a href="eventos.html" class="nav-link"><span class="nav-icon"><i class="fas fa-calendar-alt"></i></span><span class="nav-text">Eventos</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Meu Negócio</div>
+                    <div class="nav-item"><a href="cadastrar.html" class="nav-link"><span class="nav-icon"><i class="fas fa-user-plus"></i></span><span class="nav-text">Cadastrar</span></a></div>
+                    <div class="nav-item"><a href="upgrade.html" class="nav-link"><span class="nav-icon"><i class="fas fa-arrow-up-right-dots"></i></span><span class="nav-text">Upgrade</span></a></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Minha Rede</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-network-wired"></i></span><span class="nav-text">Rede</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="rede-diretos.html" class="nav-link">Diretos</a><a href="rede-equipe.html" class="nav-link">Equipe</a><a href="rede-unilevel.html" class="nav-link">Unilevel</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Financeiro</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-wallet"></i></span><span class="nav-text">Financeiro</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="financeiro-resumo.html" class="nav-link">Resumo</a><a href="financeiro-extrato.html" class="nav-link">Extrato</a><a href="financeiro-solicitar-saque.html" class="nav-link">Solicitar Saque</a><a href="financeiro-meus-saques.html" class="nav-link">Meus Saques</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Relatórios</div>
+                    <div class="nav-item has-submenu"><a href="#" class="nav-link"><span class="nav-icon"><i class="fas fa-chart-bar"></i></span><span class="nav-text">Relatórios</span><span class="nav-arrow"><i class="fas fa-chevron-right"></i></span></a>
+                        <div class="nav-submenu"><a href="relatorios-bonus.html" class="nav-link">Bônus Totais</a><a href="relatorios-graduacoes.html" class="nav-link">Graduações</a></div></div>
+                </div>
+                <div class="nav-section"><div class="nav-section-title">Marketing</div>
+                    <div class="nav-item"><a href="mkt-digital.html" class="nav-link active"><span class="nav-icon"><i class="fas fa-globe"></i></span><span class="nav-text">MKT Digital</span></a></div>
+                    <div class="nav-item"><a href="materiais.html" class="nav-link"><span class="nav-icon"><i class="fas fa-folder-open"></i></span><span class="nav-text">Materiais</span></a></div>
+                </div>
+            </nav>
+            <div class="sidebar-footer"><div class="sidebar-user"><div class="sidebar-user-avatar">CE</div><div class="sidebar-user-info"><div class="sidebar-user-name">Carlos Eduardo</div><div class="sidebar-user-role">Consultor Ouro ⭐</div></div></div></div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="topbar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                    <div class="topbar-breadcrumb"><a href="dashboard.html"><i class="fas fa-home" style="font-size:0.8rem;"></i></a><i class="fas fa-chevron-right" style="font-size:0.5rem;"></i><span class="current">MKT Digital</span></div>
+                </div>
+                <div class="topbar-right">
+                    <div class="dropdown"><div class="topbar-user" data-bs-toggle="dropdown"><div class="topbar-user-avatar">CE</div><div class="topbar-user-info"><div class="topbar-user-name">Carlos Eduardo</div><div class="topbar-user-role">Consultor Ouro</div></div></div>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom"><div class="p-1"><a href="login.html" class="dropdown-item" style="color:var(--danger);"><i class="fas fa-sign-out-alt"></i> Sair</a></div></div></div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-globe me-2" style="color:var(--primary);"></i>Marketing Digital</h1>
+                    <p class="page-subtitle">Sua página de vendas personalizada e ferramentas para captura de leads.</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-1">
+                            <div class="stat-icon" style="background:var(--primary-100);color:var(--primary-dark);"><i class="fas fa-eye"></i></div>
+                            <div class="stat-value">1.245</div>
+                            <div class="stat-label">Visitas</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-2">
+                            <div class="stat-icon" style="background:var(--accent-100);color:var(--accent-dark);"><i class="fas fa-user-plus"></i></div>
+                            <div class="stat-value">68</div>
+                            <div class="stat-label">Cadastros</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-3">
+                            <div class="stat-icon" style="background:var(--info-light);color:var(--info-dark);"><i class="fas fa-percent"></i></div>
+                            <div class="stat-value">5,46%</div>
+                            <div class="stat-label">Taxa de Conversão</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-mini-card animate-fadeInUp stagger-4">
+                            <div class="stat-icon" style="background:rgba(139,92,246,0.1);color:#7C3AED;"><i class="fas fa-share-nodes"></i></div>
+                            <div class="stat-value">342</div>
+                            <div class="stat-label">Compartilhamentos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link de Captura -->
+                <div class="card mb-4 animate-fadeInUp">
+                    <div class="card-header-custom"><h5><i class="fas fa-link me-2" style="color:var(--primary);"></i>Sua Página de Vendas</h5></div>
+                    <div class="card-body">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-7">
+                                <label class="form-label">Link personalizado da sua página</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" value="https://veloxsolar.com.br/c/carlosenergia" readonly style="background:var(--gray-50);font-weight:600;">
+                                    <button class="btn btn-solar" onclick="copyToClipboard('https://veloxsolar.com.br/c/carlosenergia')"><i class="fas fa-copy me-1"></i> Copiar</button>
+                                </div>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('https://veloxsolar.com.br/c/carlosenergia')"><i class="fab fa-whatsapp me-1" style="color:#25D366;"></i> WhatsApp</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fab fa-facebook me-1" style="color:#1877F2;"></i> Facebook</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fab fa-instagram me-1" style="color:#E4405F;"></i> Instagram</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><i class="fab fa-telegram me-1" style="color:#0088CC;"></i> Telegram</button>
+                                </div>
+                                <div class="mt-3 d-flex gap-3">
+                                    <div class="d-flex align-items-center gap-2" style="font-size:0.8125rem;">
+                                        <i class="fas fa-qrcode" style="color:var(--gray-400); font-size:1.5rem;"></i>
+                                        <div>
+                                            <div class="fw-600">QR Code</div>
+                                            <a href="#" style="color:var(--primary); font-size:0.75rem;">Baixar QR Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <!-- Preview miniatura -->
+                                <div style="background:var(--gradient-power); border-radius:14px; padding:24px; color:white; text-align:center; position:relative; overflow:hidden;">
+                                    <div style="position:absolute; top:-20px; right:-20px; width:80px; height:80px; background:rgba(245,158,11,0.15); border-radius:50%;"></div>
+                                    <i class="fas fa-sun" style="font-size:2rem; color:var(--primary); margin-bottom:12px;"></i>
+                                    <h5 style="color:white; margin-bottom:4px;">Velox Solar</h5>
+                                    <p style="font-size:0.75rem; opacity:0.7; margin-bottom:16px;">Economize até 25% na sua conta de luz com energia solar por assinatura!</p>
+                                    <div style="background:var(--primary); padding:8px 20px; border-radius:8px; display:inline-block; font-size:0.75rem; font-weight:700;">
+                                        Quero Economizar →
+                                    </div>
+                                    <div style="margin-top:12px; font-size:0.65rem; opacity:0.5;">Preview da página de captura</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link de Indicação -->
+                <div class="card animate-fadeInUp">
+                    <div class="card-header-custom"><h5><i class="fas fa-user-plus me-2" style="color:var(--accent);"></i>Link de Indicação de Consultores</h5></div>
+                    <div class="card-body">
+                        <label class="form-label">Compartilhe este link para indicar novos consultores</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" value="https://veloxsolar.com.br/cadastro?ref=carlosenergia" readonly style="background:var(--gray-50);font-weight:600;">
+                            <button class="btn btn-accent" onclick="copyToClipboard('https://veloxsolar.com.br/cadastro?ref=carlosenergia')"><i class="fas fa-copy me-1"></i> Copiar</button>
+                        </div>
+                        <p style="font-size:0.8125rem; color:var(--gray-500);"><i class="fas fa-info-circle me-1"></i> Novos consultores que se cadastrarem por este link entrarão automaticamente na sua rede como indicados diretos.</p>
+                    </div>
+                </div>
+
+                <div class="text-center py-4" style="border-top:1px solid var(--gray-200); margin-top:30px;">
+                    <p style="font-size:0.75rem; color:var(--gray-400); margin:0;">© 2024 Velox Solar — Plataforma de Energia Solar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
